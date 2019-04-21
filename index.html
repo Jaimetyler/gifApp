@@ -7,14 +7,34 @@
     <link rel="stylesheet" type="css/text" href="/assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bad+Script|Changa|Srisakdi" rel="stylesheet">
     <link rel="stylesheet" type="css/text" href="assets/css/style.css">
     <title>Gifs</title>
     <style>
-        
-        .sidebar {
-            background-color: rgba(32, 32, 32, 0.5);
+        body {
+            /* background-color: rgba(32, 32, 32, 0.5); */
+            background:
+                linear-gradient(rgb(34, 28, 28), transparent),
+                linear-gradient(to top left, rgb(92, 54, 54), transparent),
+                linear-gradient(to top right, rgb(173, 59, 59), transparent);
+            background-blend-mode: screen;
             text-align: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Bad Script', cursive;
+            font-family: 'Changa', sans-serif;
+            font-family: 'Srisakdi', cursive;
+            font-family: 'Audiowide', cursive;
+        }
+
+        /* .sidebar {
+             background-color: rgba(32, 32, 32, 0.5); 
             
+        } */
+
+        #search-input {
+            background-color: rgba(63, 45, 45, 0.32);
+            border: none;
         }
 
         button {
@@ -61,10 +81,10 @@
 
 <body>
     <div class="sidebar">
-        <h1>Movies</h1>
+        <h1>The Ultimate Gif Search</h1>
 
         <form id="search-form">
-            <label for="search-input">Type a movie</label>
+            <label for="search-input">Type a word, find some gifs! </label>
             <input type="text" id="search-input">
             <input id="add-button" type="submit" value="Add Button">
             <br>
@@ -79,7 +99,25 @@
     </div>
     <!-- </div>
     </div> -->
-
+    <div class="modal fade" id="directions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
 
