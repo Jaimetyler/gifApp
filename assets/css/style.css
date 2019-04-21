@@ -1,8 +1,16 @@
+.sidebar {
+    background-color: rgb(49, 43, 43);
+    text-align: center;
+}
 button{
+    
     margin: 10px;
 }
 
-img {
-    float: right;
+.flex-container {
+    display: flex;
+}
 
+#gifs {
+    margin: 5px;
 }
