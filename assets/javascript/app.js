@@ -6,7 +6,7 @@ $(function(){
 
 })
 
-var searchArray = ["shark", "orca", "eel"]
+var searchArray = ["Step Brothers", "Karate Kid", "Super Bad"];
 
 function addButtons(searchArray,classToAdd,areaToAdd){
     $(areaToAdd).empty();
