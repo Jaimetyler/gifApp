@@ -35,7 +35,7 @@ $(document).on("click", ".searchButton", function () {
         console.log(response);
 
         for (var i = 0; i < response.data.length; i++) {
-            var searchDiv = $('<div class = "col-sm-4">');
+            var searchDiv = $('<div class = "col-xs-5">');
             var rating = response.data[i].rating;
             var p = $("<p>").text("Rating : " + rating);
             var animated = response.data[i].images.fixed_height.url;
