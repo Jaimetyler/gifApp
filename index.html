@@ -13,18 +13,26 @@
     <style>
         body {
             /* background-color: rgba(32, 32, 32, 0.5); */
-            background:
+            /* background:
                 linear-gradient(rgb(34, 28, 28), transparent),
                 linear-gradient(to top left, rgb(92, 54, 54), transparent),
                 linear-gradient(to top right, rgb(173, 59, 59), transparent);
             background-blend-mode: screen;
             text-align: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: cover; */
+            background: #FFA17F;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #00223E, #FFA17F);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            text-align: center;
             font-family: 'Bad Script', cursive;
             font-family: 'Changa', sans-serif;
             font-family: 'Srisakdi', cursive;
             font-family: 'Audiowide', cursive;
+            color: white;
         }
 
         /* .sidebar {
@@ -33,7 +41,11 @@
         } */
 
         #search-input {
-            background-color: rgba(63, 45, 45, 0.32);
+            background: #FFA17F;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #00223E, #FFA17F);
             border: none;
         }
 
@@ -43,29 +55,37 @@
 
         button,
         #buttons-view {
-            color: #494949 !important;
+            color: white;
             font-weight: bold;
             text-transform: uppercase;
-            background: #a53737;
+            background: #FFA17F;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #00223E, #FFA17F);
             padding: 10px;
-            border: 4px solid #494949 !important;
-            border-radius: 6px;
+            /* border: 4px solid #494949 !important;
+            border-radius: 6px; */
             display: inline-block;
         }
 
         #add-button {
             display: inline-block;
             padding: 0.35em 1.2em;
-            border: 0.1em solid #a53737;
-            margin: 0 0.3em 0.3em 0;
+            
+            margin: 24px;
             border-radius: 0.12em;
             box-sizing: border-box;
             text-decoration: none;
             font-weight: bold;
-            color: #a53737;
+            color: white;
             text-align: center;
             transition: all 0.2s;
-            background-color: #494949;
+            background: #FFA17F;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #00223E, #FFA17F);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #00223E, #FFA17F);
         }
 
         .flex-container {
@@ -74,6 +94,28 @@
 
         #gifs {
             margin: 5px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            body {
+                /* background-color: rgba(32, 32, 32, 0.5); */
+                background: linear-gradient(rgb(34, 28, 28), transparent), linear-gradient(to top left, rgb(92, 54, 54), transparent), linear-gradient(to top right, rgb(173, 59, 59), transparent);
+                background-blend-mode: screen;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-family: 'Bad Script', cursive;
+                font-family: 'Changa', sans-serif;
+                font-family: 'Srisakdi', cursive;
+                font-family: 'Audiowide', cursive;
+                color: white;
+                font-size: 50px;
+            }
+
+            .h1,
+            h1 {
+                font-size: 75px;
+            }
         }
     </style>
 
@@ -93,36 +135,38 @@
         <div id="buttons-view"></div>
 
     </div>
-    <!-- <div class="container">
-        <div class="row"> -->
-    <div class="row" id="gifs">
-    </div>
-    <!-- </div>
+
+    <div class="row">
+        <div class="row" id="gifs">
+
+        </div>
+        <!-- </div>
     </div> -->
-    <div class="modal fade" id="directions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="directions" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
                 </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="assets/javascript/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>
